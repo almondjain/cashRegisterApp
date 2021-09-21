@@ -13,7 +13,7 @@ console.log(checkButton);
 const errorMessage = document.querySelector("#error-message");
 console.log(errorMessage);
 
-const noOfNotes = document.querySelector(".no-of-notes");
+const noOfNotes = document.querySelectorAll(".no-of-notes");
 console.log(noOfNotes);
 
 const notesAvailable = [2000, 500, 100, 20, 10, 5, 1];
