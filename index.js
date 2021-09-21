@@ -23,11 +23,13 @@ checkButton.addEventListener("click", () => {
     hideMessage();
 
     if(billAmount.value>0){
-        output.classList.remove("hidden");
-        if(cashGiven.value >= billAmount.value){
+        
+        var cash = Number(cashGiven.value);
+        var bill = Number(billAmount.value);
+        if(cash >= bill){
             console.log('cashGiven.value'+cashGiven.value);
             console.log('billAmount.value '+billAmount.value);
-            let returnedAmount = cashGiven.value - billAmount.value;
+            var returnedAmount = cash - bill;
             console.log('returnedAmount '+returnedAmount);
             calculateChange(returnedAmount);
         }
@@ -47,8 +49,10 @@ function calculateChange(returnedAmount)
     for(let i=0;i<notesAvailable.length;i++)
     {
         const numberOfNotes = Math.trunc(returnedAmount/notesAvailable[i]);
+        console.log(notesAvailable[i],numberOfNotes);
         
         returnedAmount = returnedAmount % notesAvailable[i];
+        console.log('returnedAmount',returnedAmount);
 
         console.log('noOfNotes[i] '+noOfNotes[i]);
         console.log('noOfNotes[i].innerText '+noOfNotes[i].innerText);
