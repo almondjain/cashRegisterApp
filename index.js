@@ -54,6 +54,7 @@ function calculateChange(returnedAmount)
         returnedAmount = returnedAmount % notesAvailable[i];
         console.log('returnedAmount',returnedAmount);
 
+        console.log(noOfNotes);
         console.log('noOfNotes[i] '+noOfNotes[i]);
         console.log('noOfNotes[i].innerText '+noOfNotes[i].innerText);
         
